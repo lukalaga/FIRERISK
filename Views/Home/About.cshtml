@@ -1,0 +1,32 @@
+﻿@model IEnumerable<FIRERISK.ViewModels.EnrollmentDateGroup>
+
+@{ 
+    ViewBag.Title = "Statistics";
+}
+
+<h2>Organization Statistics</h2>
+
+<table class="table table-responsive table-striped">
+
+    <tr>
+        <th scope="col">
+            Enrollment Date
+        </th>
+        <th scope="col">
+            Organizations
+        </th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem=>item.EnrollmentDate)
+            </td>
+            <td>
+                @item.OrganizationCount
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,80 @@
+﻿@model IEnumerable<FIRERISK.Models.Workplace>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Industrial Workplace</h2>
+
+<button type="button" class="btn btn-outline-warning">
+    @Html.ActionLink("Create New", "Create")
+</button>
+<hr />
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name:@Html.TextBox("searchString")
+        <input type="submit" value="Search">
+    </p>
+}
+
+<table class="table table-bordered table-responsive table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkplaceName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhysicalAddress)
+        </th>
+        <th>
+            Male Employees
+        </th>
+        <th>
+            Female Employees
+        </th>
+        <th>
+            Total Employees
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkplaceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostalAddress)
+            </td>
+
+               <td>
+                @Html.DisplayFor(modelItem => item.MaleEmployees)
+            </td>
+
+               <td>
+                @Html.DisplayFor(modelItem => item.FemaleEmployees)
+            </td>
+               <td>
+                   @Model.Sum(b => b.FemaleEmployees)
+
+               </td>
+
+
+            
+            <td>
+                <button type="button" class="btn btn-default btn-block">
+                    @Html.ActionLink("Details","Details",new { id = item.ID })
+                </button>
+            </td>
+        </tr>
+    }
+    </table>
+

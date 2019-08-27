@@ -1,0 +1,74 @@
+﻿@model FIRERISK.Models.Workplace
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Workplace Details</h2>
+
+<div>
+
+    <hr />
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkplaceName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.PostalAddress)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.PhysicalAddress)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.MaleEmployees)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.MaleEmployees)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.SiteDescription)
+            </th>
+
+
+
+
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.WorkplaceName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PostalAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PhysicalAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.MaleEmployees)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.FemaleEmployees)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.SiteDescription)
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
