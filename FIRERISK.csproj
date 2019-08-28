@@ -134,6 +134,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuditorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WorkplaceController.cs" />
     <Compile Include="DAL\MinetConfigurations.cs" />
@@ -146,7 +147,13 @@
       <DependentUpon>201908262154273_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Auditor.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Industry.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Observation.cs" />
+    <Compile Include="Models\Rate.cs" />
+    <Compile Include="Models\Rule.cs" />
     <Compile Include="Models\Workplace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\EnrollmentDateGroup.cs" />
@@ -235,6 +242,11 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Workplace\Statistics.cshtml" />
+    <Content Include="Views\Auditor\Create.cshtml" />
+    <Content Include="Views\Auditor\Delete.cshtml" />
+    <Content Include="Views\Auditor\Details.cshtml" />
+    <Content Include="Views\Auditor\Edit.cshtml" />
+    <Content Include="Views\Auditor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

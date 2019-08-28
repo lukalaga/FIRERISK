@@ -27,10 +27,17 @@ namespace FIRERISK.Models
         [Display(Name ="Site Description")]
         public string SiteDescription { get; set; }
 
+        public int OnAttachment { get; set; }
+
+        public int DisabledNo { get; set; }
+
         public string HealthOfficer { get; set; }
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
-        //  public virtual ICollection<Industry> Industrys { get; set; }
+        public string IndustryID { get; set; }
+
+        public virtual Industry Industry { get; set; }
+               
     }
 }
