@@ -6,7 +6,7 @@ namespace FIRERISK.Models
     public class Workplace
     {
         [Key]
-        public int ID { get; set; }
+        public string RegID { get; set; }
 
         [Display(Name ="Workplace Name")]
         public string WorkplaceName { get; set; }

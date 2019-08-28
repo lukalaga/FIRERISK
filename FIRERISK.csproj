@@ -134,7 +134,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AuditorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WorkplaceController.cs" />
     <Compile Include="DAL\MinetConfigurations.cs" />
@@ -142,9 +141,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908262154273_Initial.cs" />
-    <Compile Include="Migrations\201908262154273_Initial.Designer.cs">
-      <DependentUpon>201908262154273_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201908280735463_Inital.cs" />
+    <Compile Include="Migrations\201908280735463_Inital.Designer.cs">
+      <DependentUpon>201908280735463_Inital.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Auditor.cs" />
@@ -242,11 +241,6 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Workplace\Statistics.cshtml" />
-    <Content Include="Views\Auditor\Create.cshtml" />
-    <Content Include="Views\Auditor\Delete.cshtml" />
-    <Content Include="Views\Auditor\Details.cshtml" />
-    <Content Include="Views\Auditor\Edit.cshtml" />
-    <Content Include="Views\Auditor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -257,15 +251,15 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908262154273_Initial.resx">
-      <DependentUpon>201908262154273_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908280735463_Inital.resx">
+      <DependentUpon>201908280735463_Inital.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
